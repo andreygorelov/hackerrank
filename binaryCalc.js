@@ -1,3 +1,4 @@
+// Get all the buttons
 var res = document.getElementById("res");
 var btn0 = document.getElementById("btn0");
 var btn1 = document.getElementById("btn1");
@@ -7,7 +8,7 @@ var btnSum = document.getElementById("btnSum");
 var btnSub = document.getElementById("btnSub");
 var btnDiv = document.getElementById("btnDiv");
 var btnMul = document.getElementById("btnMul");
-
+// Add numbers and operators to display
 function addRes(val) {
   var tempRes = res.innerHTML;
   res.innerHTML = tempRes + "" + val;
@@ -30,10 +31,12 @@ btnMul.onclick = function() {
 btnDiv.onclick = function() {
   addRes(btnDiv.innerHTML);
 }
-
+// General calculator method takes two params and a function.
+// Round down if it has decimals 
 var calc = function(x, y, fn) {
   return Math.floor((fn(parseInt(x, 2), parseInt(y, 2))).toString(2));
 }
+// Actual calculation functions
 var sum = function(x, y) {
   return x + y;
 }
@@ -46,7 +49,8 @@ var mul = function(x, y) {
 var div = function(x, y) {
   return x / y;
 }
-
+// Equal is pressed.
+// Separate first number, operator (fn) and second number
 btnEql.onclick = function() {
   var tempResArr = res.innerHTML.split('');
   var x = '';
@@ -73,6 +77,7 @@ btnEql.onclick = function() {
   }
   res.innerHTML = calc(x, y, fn);
 }
+// Clear the display
 btnClr.onclick = function() {
   res.innerHTML = '';
 }
