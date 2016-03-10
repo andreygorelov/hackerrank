@@ -1,0 +1,42 @@
+#wrapper{
+    width: 40%;
+    border: 3px solid #CCC;
+    padding: 2px;
+    height: 120px;
+}
+#res {
+  background-color: lightgray;
+  border: 1px solid black;
+  height: 48px;
+  font-size: 20px;
+}
+
+#btns {
+}
+
+#btns > button {
+  width: 25%;
+  height: 36px;
+  float: left;
+  font-size: 18px;
+}
+
+#btn0,
+#btn1 {
+  background-color: lightgreen;
+  color: brown;
+}
+
+#btnClr,
+#btnEql {
+  background-color: darkgreen;
+  color: white;
+}
+
+#btnSum,
+#btnSub,
+#btnDiv,
+#btnMul {
+  background-color: black;
+  color: red;
+}
